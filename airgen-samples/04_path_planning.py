@@ -1,14 +1,15 @@
 import airgen
-import numpy as np 
+import numpy as np
+
 
 class DroneController:
     def __init__(self):
-        # Initialize a drone client 
+        # Initialize a drone client
         self.drone_client = airgen.MultirotorClient()
-        
+
         # Reset previous state if any
         self.drone_client.reset()
-        
+
         # Confirm the connection, and enable offboard (API) control
         self.drone_client.confirmConnection()
         self.drone_client.enableApiControl(True)
@@ -16,19 +17,44 @@ class DroneController:
         # Take off
         self.drone_client.takeoffAsync().join()
 
-
         # Get navigation map information from the simulation world
         self.nav_mesh_info = self.drone_client.getNavMeshInfo()
         print("Nav mesh info: {}".format(self.nav_mesh_info))
 
     def sample_random_pose(self):
         # calculate bounds of the nav mesh
-        amplitude = np.absolute(np.array([self.nav_mesh_info[2]['x_val'] - self.nav_mesh_info[1]['x_val'], self.nav_mesh_info[2]['y_val'] - self.nav_mesh_info[1]['y_val'], self.nav_mesh_info[2]['z_val'] - self.nav_mesh_info[1]['z_val']]))/2.0
+        amplitude = (
+            np.absolute(
+                np.array(
+                    [
+                        self.nav_mesh_info[2]["x_val"] - self.nav_mesh_info[1]["x_val"],
+                        self.nav_mesh_info[2]["y_val"] - self.nav_mesh_info[1]["y_val"],
+                        self.nav_mesh_info[2]["z_val"] - self.nav_mesh_info[1]["z_val"],
+                    ]
+                )
+            )
+            / 2.0
+        )
         # sample a random point on the nav mesh
-        random_point = airgen.Vector3r(np.random.uniform(self.nav_mesh_info[0]['x_val']-amplitude[0], self.nav_mesh_info[0]['x_val']+amplitude[0]), np.random.uniform(self.nav_mesh_info[0]['y_val']-amplitude[1], self.nav_mesh_info[0]['y_val']+amplitude[1]), np.random.uniform(self.nav_mesh_info[0]['z_val']-amplitude[2], self.nav_mesh_info[0]['z_val']+amplitude[2]))
+        random_point = airgen.Vector3r(
+            np.random.uniform(
+                self.nav_mesh_info[0]["x_val"] - amplitude[0],
+                self.nav_mesh_info[0]["x_val"] + amplitude[0],
+            ),
+            np.random.uniform(
+                self.nav_mesh_info[0]["y_val"] - amplitude[1],
+                self.nav_mesh_info[0]["y_val"] + amplitude[1],
+            ),
+            np.random.uniform(
+                self.nav_mesh_info[0]["z_val"] - amplitude[2],
+                self.nav_mesh_info[0]["z_val"] + amplitude[2],
+            ),
+        )
         # sample a random yaw angle
         random_yaw = np.random.uniform(-np.pi, np.pi)
-        return airgen.Pose(random_point, airgen.Quaternionr(airgen.Vector3r(0, 0, random_yaw)))
+        return airgen.Pose(
+            random_point, airgen.Quaternionr(airgen.Vector3r(0, 0, random_yaw))
+        )
 
     def plan_and_move(self):
         # Get current pose of the drone in 6-DOF
@@ -39,7 +65,15 @@ class DroneController:
         goal_pose.position.z_val = start_pose.position.z_val
 
         # Compute a collision-free path between start and goal
-        trajectory = self.drone_client.simPlanPath(start_pose.position, goal_pose.position, True, True)
+        trajectory = self.drone_client.simPlanPath(
+            start_pose.position, goal_pose.position, True, True
+        )
+
+        # always check the lenght of the trajectory before moving
+        # if len(trajectory) < 2, then no viable path was found
+        # in this case, consider using:
+        #   drone_client.simPlanPathToRandomizedGoal: find a path with end point within a certain radius of the goal
+        #   drone_client.simPlanPathToRandomFreePoint: find a path with end point within a certain radius of a random point (current position for example)
 
         points = []
         for waypoint in trajectory:
@@ -59,12 +93,15 @@ class DroneController:
             0,
         ).join()
 
+
 controller = DroneController()
 
 while True:
     try:
         pose = controller.sample_random_pose()
-        print(f"Moving to new position: [{pose.position.x_val}, {pose.position.y_val}, {pose.position.z_val}]")
+        print(
+            f"Moving to new position: [{pose.position.x_val}, {pose.position.y_val}, {pose.position.z_val}]"
+        )
         controller.plan_and_move()
     except KeyboardInterrupt:
         print("Keyboard interrupt detected, exiting...")
