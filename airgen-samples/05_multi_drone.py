@@ -3,7 +3,7 @@ import threading
 
 
 def run_drone(id: int):
-    client = airgen.MultirotorClient()
+    client = airgen.connect_airgen(robot_type="multirotor")
     client.confirmConnection()
 
     vehicle_name = f"Drone_{id}"
