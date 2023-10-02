@@ -1,7 +1,6 @@
 import airgen
 import time
-client = airgen.MultirotorClient()
-client.confirmConnection()
+client = airgen.connect_airgen(robot_type="multirotor")
 
 client.moveByVelocityAsync(0, -5, 0, 120)
 client.simEnableWeather(False)
