@@ -5,7 +5,7 @@ import numpy as np
 class DroneController:
     def __init__(self):
         # Initialize a drone client
-        self.drone_client = airgen.MultirotorClient()
+        self.drone_client = airgen.connect_airgen(robot_type="multirotor")
 
         # Reset previous state if any
         self.drone_client.reset()
