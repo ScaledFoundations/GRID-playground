@@ -2,7 +2,7 @@
 
 GRID is a platform for rapid infusion of safe intelligence into robotic platforms built by Scaled Foundations. 
 
-GRID aims to be a platform for rapid prototyping of AI capabilities for robotics through foundation models and simulation. At the core of GRID is a <i>Foundation Mosaic</i>, a combination of several foundation models for perception, state estimation, safety, and control. An orchestration and reasoning layer powered by large language models allows for natural interaction and makes use of the underlying models to solve complex robotics tasks. GRID makes use of AirGen, a state of the art aerial robotics simulator for data generation and evaluation.  This modular design enables various deep ML components and existing foundation models to be easily usable in a wider variety of robot-centric problems. To know more about our vision and technology, please read our [technical report](https://scaledfoundations.ai/wp-content/uploads/GRID_paper.pdf).
+GRID aims to be a platform for rapid prototyping of AI capabilities for robotics through foundation models and simulation. At the core of GRID is a <i>Foundation Mosaic</i>, a combination of several foundation models for perception, state estimation, safety, and control. An orchestration and reasoning layer powered by large language models allows for natural interaction and makes use of the underlying models to solve complex robotics tasks. GRID makes use of AirGen, a state of the art aerial robotics simulator for data generation and evaluation.  This modular design enables various deep ML components and existing foundation models to be easily usable in a wider variety of robot-centric problems. To know more about our vision and technology, please read our [technical report](https://arxiv.org/abs/2310.00887).
 
 ![image](https://github.com/ScaledFoundations/GRID-playground/assets/2274262/1b21ff88-f596-4fec-aabd-f0b0d35e153b)
 
@@ -15,10 +15,13 @@ GRID is currently composed of :
 The usage of GRID is governed by the Responsible AI License. GRID is free to use for non-commercial research purposes. If you find our work useful in your research, please cite us as:
 
 ```
-@techreport{sf2023grid,
-  title = {GRID: A Platform for General Robot Intelligence Development},
-  author = {Scaled Foundations},
-  note  =  {\url{http://scaledfoundations.ai/wp-content/uploads/GRID_paper.pdf}}
+@techreport{vemprala2023grid,
+      title={GRID: A Platform for General Robot Intelligence Development}, 
+      author={Sai Vemprala and Shuhang Chen and Abhinav Shukla and Dinesh Narayanan and Ashish Kapoor},
+      year={2023},
+      eprint={2310.00887},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
 }
 ```
 
