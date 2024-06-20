@@ -1,0 +1,280 @@
+// This file sets the parameters, sensors and default values for the robot used in the simulation
+{
+    "SettingsVersion": 1.2, // Set the version of the settings file according to the version of Airgen
+  
+    /*
+    Key: SimMode
+    Value: str | "Multirotor", "Car", ""
+    Usage: Set the type of robot to use. Multirotor for UAV, Car for UGV. Leave empty to prompt user at
+           start of the simulation run to select
+    */
+    "SimMode": "Multirotor", 
+  
+    /*
+    Key: CameraDefaults
+    Usage: Set the default camera parameters for all cameras in the sim. Any cameras that do not have 
+           parameters defined specifically will default to these. The preset defaults for cameras are
+           mentioned below
+    */
+    "CameraDefaults":
+    {
+        /*
+        Key: CaptureSettings
+        Usage: Adjust camera internal parameters like the type of camera, resolution, FOV etc. for the camera.
+               Refer to the AirGen documentation for the ImageType values and their meaning. The different fields
+               that can be edited with their preset values are
+                    "ImageType": 0,
+                    "Width": 256,
+                    "Height": 256,
+                    "FOV_Degrees": 90,
+                    "AutoExposureSpeed": 100.0,
+                    "AutoExposureBias": 0,
+                    "MotionBlurAmount": 0.0,
+                    "MotionBlurMaxDistortion": 0.0,
+                    "TargetGamma": 1.0
+        */
+        "CaptureSettings":
+        [
+            {
+                "ImageType": 0,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 1,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 2,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 3,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 4,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 5,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 6,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 7,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            },
+            {
+                "ImageType": 8,
+                "Width": 256,
+                "Height": 256,
+                "FOV_Degrees": 90
+            }
+        ]
+
+        /*
+        Here are some other fields that can be added to CameraDefaults along with the CaptureSettings
+        to configure various other default parameter for cameras. 
+
+            "Position":
+            {
+                "X": 0,
+                "Y": 0,
+                "Z": -1
+            },
+            
+            "Rotation":
+            {
+                "Pitch": -10,
+                "Roll": 0,
+                "Yaw": 0
+            },
+
+            "NoiseSettings":
+            [{
+                "Enabled": true,
+                "ImageType": 0,
+                "NoiseKind": "Gaussian",
+                "HorzNoise": 0.02,
+                "VertNoise": 0.02
+            }],
+
+            "Gimbal":
+            {
+                "Stabilization": true,
+                "Pitch": -10,
+                "Roll": 0,
+                "Yaw": 0
+            },
+
+            "DrawDebugInfo": false,
+            "FollowDistance": 4,
+
+            "DepthOfField":
+            {
+                "FocalDistance": 200,
+                "Fstop": 2.8,
+                "BlurAmount": 0.5
+            },
+
+            "MotionBlur":
+            {
+                "Enabled": true,
+                "Intensity": 0.2
+            },
+
+            "GammaCorrection": true,
+            "NoiseModel": "Gaussian"
+        */
+    },
+
+    /*
+    Key: Vehicles
+    Value: str | Names of the vehicles
+    Usage: Contains the details for the vehicles being used
+    */
+    "Vehicles":
+    {
+        "Drone":
+        {
+            "VehicleType": "SimpleFlight", // Refer to AirGen documentation for possible VehicleType
+            "VehicleModel": "default", // Refer to AirGen documentation for possible models
+            "X": 0, // Spawn X coordinate of vehicle in simulation
+            "Y": 0, // Spawn Y coordinate of vehicle in simulation
+            "Z": 0, // Spawn Z coordinate of vehicle in simulation
+
+            /*
+            Key: Cameras
+            Value: str | Names of the cameras on selected vehicle. Refer to AirGen documentation for default names
+                   for different VehicleType models
+            Usage: Declare the cameras attached to the vehicle and set the custom parameters of each.Uses defaults
+                   configured as above if no specific parameters are declared
+            */
+            "Cameras":
+            {
+                /*
+                Here we add 3 cameras for example with names "front_center", "front_left", and "bottom_center"
+                with their corresponding positions and rotation specifications. All other fields that are not declared
+                take their default values as defined in the CameraDefaults section
+                */
+                "front_center":
+                {
+                    "X": 0, "Y": 0, "Z":0, "Roll": 0, "Pitch": 0, "Yaw": 0
+                },
+                "bottom_center":
+                {
+                    "X": 0, "Y": 0, "Z":0, "Roll": 0, "Pitch": -90, "Yaw": 0
+                },
+                "front_left":
+                {
+                    "X": 0, "Y": 0, "Z":0, "Roll": 0, "Pitch": 0, "Yaw": -90
+                }
+            }
+        }
+    },
+
+    // Refer to AirGen documentation
+    "OriginGeopoint":
+    {
+        "Latitude": 47.62094998919241,
+        "Longitude": -122.35554810901883,
+        "Altitude": 100
+    },
+
+    // Refer to Airgen documentation for details on the various sensors and their parameters
+    "DefaultSensors":
+    {
+        "Gps":
+        {
+            "SensorType": 3,
+            "Enabled": true,
+            "EphTimeConstant": 0.9,
+            "EpvTimeConstant": 0.9,
+            "EphInitial": 25,
+            "EpvInitial": 25,
+            "EphFinal": 0.1,
+            "EpvFinal": 0.1,
+            "EphMin3d": 3,
+            "EphMin2d": 4,
+            "UpdateLatency": 0.2,
+            "UpdateFrequency": 50,
+            "StartupDelay": 1
+        },
+
+        "Imu":
+        {
+            "SensorType": 2,
+            "Enabled": true,
+            "AngularRandomWalk": 0.3,
+            "GyroBiasStabilityTau": 500,
+            "GyroBiasStability": 4.6,
+            "VelocityRandomWalk": 0.24,
+            "AccelBiasStabilityTau": 800,
+            "AccelBiasStability": 36
+        },
+
+        "Lidar":
+        {
+            "SensorType": 6,
+            "Enabled": false,
+            "NumberOfChannels": 16,
+            "RotationsPerSecond": 10,
+            "PointsPerSecond": 100000,
+            "X": 0,
+            "Y": 0,
+            "Z": -1,
+            "Roll": 0,
+            "Pitch": 0,
+            "Yaw": 0,
+            "VerticalFOVUpper": -15,
+            "VerticalFOVLower": -25,
+            "HorizontalFOVStart": -20,
+            "HorizontalFOVEnd": 20,
+            "DrawDebugPoints": true,
+            "DataFrame": "SensorLocalFrame"
+        },
+
+        "Barometer":
+        {
+            "SensorType": 1,
+            "Enabled": true,
+            "PressureFactorSigma": 0.001825,
+            "PressureFactorTau": 3600,
+            "UncorrelatedNoiseSigma": 2.7,
+            "UpdateLatency": 0,
+            "UpdateFrequency": 50,
+            "StartupDelay": 0
+        },
+
+        "Magnetometer":
+        {
+            "SensorType": 4,
+            "Enabled": true,
+            "NoiseSigma": 0.005,
+            "ScaleFactor": 1,
+            "NoiseBias": 0,
+            "UpdateLatency": 0,
+            "UpdateFrequency": 50,
+            "StartupDelay": 0
+        }
+    }
+}
