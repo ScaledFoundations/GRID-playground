@@ -4,7 +4,7 @@ GRID is a platform for rapid infusion of safe intelligence into robotic platform
 
 GRID aims to be a platform for rapid prototyping of AI capabilities for robotics through foundation models and simulation. At the core of GRID is a <i>Foundation Mosaic</i>, a combination of several foundation models for perception, state estimation, safety, and control. An orchestration and reasoning layer powered by large language models allows for natural interaction and makes use of the underlying models to solve complex robotics tasks. GRID makes use of AirGen, a state of the art aerial robotics simulator for data generation and evaluation.  This modular design enables various deep ML components and existing foundation models to be easily usable in a wider variety of robot-centric problems. To know more about our vision and technology, please read our [technical report](https://arxiv.org/abs/2310.00887).
 
-![image](https://github.com/ScaledFoundations/GRID-playground/assets/2274262/1b21ff88-f596-4fec-aabd-f0b0d35e153b)
+![image](./assets/grid_interface.png)
 
 GRID is currently composed of :
 
@@ -25,14 +25,16 @@ The usage of GRID is governed by the Responsible AI License. GRID is free to use
 }
 ```
 
-## NOTE
 
-The GRID platform is currently in alpha, and is continuously evolving. We will be constantly adding new features and sample scripts, so please keep an eye out for updates!
  
 ## Getting Started
 
-To get started with GRID + AirGen, please visit our [User Portal](https://portal.scaledfoundations.ai) and create an account. For academic users, please sign up with your academic email address (.edu, .ac.* etc.) for unrestricted access to our platform.
-Visit [our getting started start doc page](https://docs.scaledfoundations.ai/start.html) for full setup instructions.
+We currently offer GRID in two forms - GRID Platform and GRID Enterprise.
+
+
+To get started with the GRID platform, please visit our [online IDE](https://portal.scaledfoundations.ai) and create an account. For GRID Enterprise, please [contact us](mailto:enterprise@scaledfoundations.ai) so that we can onboard you as an enterprise customer. 
+
+Visit our [documentation](https://docs.scaledfoundations.ai/grid_sdk/differences.html) to get the setup going.
 
 ## Simulation
 
