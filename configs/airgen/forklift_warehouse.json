@@ -1,0 +1,29 @@
+{
+    "sim": {
+        "sim_type": "airgen",
+        "scene_name": "warehouse_big",
+        "kwargs": {
+            "geo": false
+        },
+        "settings": {
+            "SimMode": "Car",
+            "Vehicles": {
+                "Drone": {
+                    "VehicleType": "Chaos",
+                    "VehicleModel": "Forklift"
+                }
+            }
+        }
+    },
+    "grid": {
+        "entities": {
+            "robot": [
+                {
+                    "name": "airgen-car",
+                    "kwargs": {}
+                }
+            ],
+            "model": []
+        }
+    }
+}

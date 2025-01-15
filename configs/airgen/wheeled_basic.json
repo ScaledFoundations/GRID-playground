@@ -1,0 +1,34 @@
+{
+    "sim": {
+        "sim_type": "airgen",
+        "scene_name": "blocks",
+        "kwargs": {
+            "geo": false
+        },
+        "settings": {
+            "SimMode": "Car",
+            "Vehicles": {
+                "Drone": {
+                    "VehicleType": "Chaos",
+                    "VehicleModel": "MCR"
+                }
+            },
+            "OriginGeopoint": {
+                "Latitude": 47.62094998919241,
+                "Longitude": -122.35554810901883,
+                "Altitude": 100
+            }
+        }
+    },
+    "grid": {
+        "entities": {
+            "robot": [
+                {
+                    "name": "airgen-drone",
+                    "kwargs": {}
+                }
+            ],
+            "model": []
+        }
+    }
+}

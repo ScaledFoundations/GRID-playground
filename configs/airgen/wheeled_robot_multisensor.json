@@ -1,0 +1,100 @@
+{
+    "airgen": {
+        "env_name": "neighborhood",
+        "geo": false,
+        "settings": {
+            "SimMode": "Car",
+            "Vehicles": {
+                "Drone": {
+                    "VehicleType": "Chaos",
+                    "VehicleModel": "MCR",
+                    "X": 0,
+                    "Y": -5,
+                    "Z": 0
+                }
+            },
+            "OriginGeopoint": {
+                "Latitude": 47.62094998919241,
+                "Longitude": -122.35554810901883,
+                "Altitude": 100
+            },
+            "DefaultSensors": {
+                "Gps": {
+                    "SensorType": 3,
+                    "Enabled": true,
+                    "EphTimeConstant": 0.9,
+                    "EpvTimeConstant": 0.9,
+                    "EphInitial": 25,
+                    "EpvInitial": 25,
+                    "EphFinal": 0.1,
+                    "EpvFinal": 0.1,
+                    "EphMin3d": 3,
+                    "EphMin2d": 4,
+                    "UpdateLatency": 0.2,
+                    "UpdateFrequency": 50,
+                    "StartupDelay": 1
+                },
+                "Imu": {
+                    "SensorType": 2,
+                    "Enabled": true,
+                    "AngularRandomWalk": 0.3,
+                    "GyroBiasStabilityTau": 500,
+                    "GyroBiasStability": 4.6,
+                    "VelocityRandomWalk": 0.24,
+                    "AccelBiasStabilityTau": 800,
+                    "AccelBiasStability": 36
+                },
+                "Lidar": {
+                    "SensorType": 6,
+                    "Enabled": true,
+                    "NumberOfChannels": 16,
+                    "RotationsPerSecond": 10,
+                    "PointsPerSecond": 100000,
+                    "X": 0,
+                    "Y": 0,
+                    "Z": -1,
+                    "Roll": 0,
+                    "Pitch": 0,
+                    "Yaw": 0,
+                    "VerticalFOVUpper": 45,
+                    "VerticalFOVLower": -45,
+                    "HorizontalFOVStart": -135,
+                    "HorizontalFOVEnd": 135,
+                    "DrawDebugPoints": true,
+                    "DataFrame": "SensorLocalFrame"
+                },
+                "Barometer": {
+                    "SensorType": 1,
+                    "Enabled": true,
+                    "PressureFactorSigma": 0.001825,
+                    "PressureFactorTau": 3600,
+                    "UncorrelatedNoiseSigma": 2.7,
+                    "UpdateLatency": 0,
+                    "UpdateFrequency": 50,
+                    "StartupDelay": 0
+                },
+                "Magnetometer": {
+                    "SensorType": 4,
+                    "Enabled": true,
+                    "NoiseSigma": 0.005,
+                    "ScaleFactor": 1,
+                    "NoiseBias": 0,
+                    "UpdateLatency": 0,
+                    "UpdateFrequency": 50,
+                    "StartupDelay": 0
+                }
+            }
+        }
+    },
+    "grid": {
+        "entities": {
+            "robot": [
+                {
+                    "name": "airgen-car",
+                    "kwargs": {}
+                }
+            ],
+            "model": []
+        }
+    }
+}
