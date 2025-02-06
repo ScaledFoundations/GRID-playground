@@ -1,8 +1,8 @@
 {
-  "ai_models": {
-    "filename": "ai_models.ipynb",
-    "title": "AI Models",
-    "simMode": "any",
+  "drone_ai_models": {
+    "filename": "ai_models_drone.ipynb",
+    "title": "Drone AI Models",
+    "simMode": "Multirotor",
     "geo": false
   },
   "drone_data_capture": {
@@ -34,6 +34,12 @@
     "title": "Drone Path Planning",
     "simMode": "Multirotor",
     "geo": true
+  },
+  "car_ai_models": {
+    "filename": "ai_models_car.ipynb",
+    "title": "Car AI Models",
+    "simMode": "Car",
+    "geo": false
   },
   "car_control": {
     "filename": "car_control.ipynb",
