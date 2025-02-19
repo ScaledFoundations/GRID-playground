@@ -1,6 +1,8 @@
-# General Robot Intelligence Development (GRID) 
+# General Robot Intelligence Development (GRID) Platform
 
-GRID is a platform built by Scaled Foundations for seamless infusion of safe intelligence into your robots. 
+GRID is a platform built by Scaled Foundations to function as every robot's AI team: enabling the creation and seamless infusion of safe intelligence into your robots. 
+
+![every-robots-ai-team](https://github.com/user-attachments/assets/a2906d8f-b1fe-4d13-aba5-e1fc17b7757f)
 
 GRID is composed of high-fidelity simulation, state of the art AI foundation models, and development and deployment pipelines. GRID represents several robotic form factors, and can be used for building several robotics skills across perception, planning, and control; or to capture massive amounts of synthetic data to train intelligent robots. To know more about our vision and technology, please visit our [website](https://scaledfoundations.ai), check out our [blogs](https://www.scaledfoundations.ai/research#blogs), or read our [technical report](https://arxiv.org/abs/2310.00887).
 
@@ -10,7 +12,6 @@ GRID is available in two flavors:
 - GRID Enterprise - A packaged enterprise version for a scalable, customizable and private robot training experience. See https://www.scaledfoundations.ai/product/grid-enterprise for more details.
 
 This repository contains several sample configurations and Python notebooks intended for use with the GRID platform.
-
 
 If you find our work useful in your academic research, please cite us as:
 
