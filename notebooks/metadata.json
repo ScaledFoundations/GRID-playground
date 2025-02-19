@@ -1,0 +1,98 @@
+{
+  "drone_ai_models": {
+    "filename": "ai_models_drone.ipynb",
+    "title": "Drone AI Models",
+    "simMode": "Multirotor",
+    "geo": false
+  },
+  "drone_data_capture": {
+    "filename": "drone_data_capture.ipynb",
+    "title": "Drone Data Capture",
+    "simMode": "Multirotor",
+    "geo": false
+  },
+  "drone_gps_nav": {
+    "filename": "drone_gps_nav.ipynb",
+    "title": "Drone GPS Navigation",
+    "simMode": "Multirotor",
+    "geo": true
+  },
+  "drone_control": {
+    "filename": "drone_control.ipynb",
+    "title": "Drone Control",
+    "simMode": "Multirotor",
+    "geo": false
+  },
+  "drone_thermal_camera": {
+    "filename": "drone_thermal_camera.ipynb",
+    "title": "Drone Thermal Camera",
+    "simMode": "Multirotor",
+    "geo": false
+  },
+  "drone_path_planning": {
+    "filename": "drone_path_planning.ipynb",
+    "title": "Drone Path Planning",
+    "simMode": "Multirotor",
+    "geo": true
+  },
+  "car_ai_models": {
+    "filename": "ai_models_car.ipynb",
+    "title": "Car AI Models",
+    "simMode": "Car",
+    "geo": false
+  },
+  "car_control": {
+    "filename": "car_control.ipynb",
+    "title": "Car Control",
+    "simMode": "Car",
+    "geo": false
+  },
+  "vehicle_control": {
+    "filename": "vehicle_control.ipynb",
+    "title": "Vehicle Control",
+    "simMode": "ComputerVision",
+    "geo": false
+  },
+  "car_data_capture": {
+    "filename": "car_data_capture.ipynb",
+    "title": "Car Data Capture",
+    "simMode": "Car",
+    "geo": false
+  },
+  "car_lidar": {
+    "filename": "car_lidar.ipynb",
+    "title": "Car LIDAR",
+    "simMode": "Car",
+    "geo": false
+  },
+  "car_path_planning": {
+    "filename": "car_path_planning.ipynb",
+    "title": "Car Path Planning",
+    "simMode": "Car",
+    "geo": true
+  },
+  "car_visual_odometry": {
+    "filename": "car_visual_odometry.ipynb",
+    "title": "Car Visual Odometry",
+    "simMode": "Car",
+    "geo": false
+  },
+  "simulation_control": {
+    "filename": "simulation_control.ipynb",
+    "title": "Simulation Control",
+    "simMode": "any",
+    "geo": false
+  },
+  "depth_point_cloud": {
+    "filename": "depth_point_cloud.ipynb",
+    "title": "Depth to Point Cloud",
+    "simMode": "any",
+    "geo": false
+  },
+  "scalable_data_generation": {
+    "filename": "scalable_data_generation.ipynb",
+    "title": "Scalable Data Generation",
+    "simMode": "Car",
+    "geo": false
+  }
+}

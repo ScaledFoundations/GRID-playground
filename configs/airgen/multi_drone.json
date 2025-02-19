@@ -1,0 +1,79 @@
+{
+    "airgen": {
+        "env_name": "electric_central",
+        "geo": false,
+        "settings": {
+            "SimMode": "Multirotor",
+            "Vehicles": {
+                "Drone": {
+                    "VehicleType": "SimpleFlight",
+                    "VehicleModel": "Astro",
+                    "X": 0, "Y": -5, "Z": 0
+                },
+                "Drone1": {
+                    "VehicleType": "SimpleFlight",
+                    "VehicleModel": "Astro",
+                    "X": 0, "Y": -2.5, "Z": 0
+                },
+                "Drone2": {
+                    "VehicleType": "SimpleFlight",
+                    "VehicleModel": "Astro",
+                    "X": 0, "Y": 0, "Z": 0
+                },
+                "Drone3": {
+                    "VehicleType": "SimpleFlight",
+                    "VehicleModel": "Astro",
+                    "X": 0, "Y": 2.5, "Z": 0
+                },
+                "Drone4": {
+                    "VehicleType": "SimpleFlight",
+                    "VehicleModel": "Astro",
+                    "X": 0, "Y": 5, "Z": 0
+                }
+            },
+            "OriginGeopoint": {
+                "Latitude": 47.62094998919241,
+                "Longitude": -122.35554810901883,
+                "Altitude": 100
+            },
+            "DefaultSensors": {
+                "Gps": {
+                    "SensorType": 3,
+                    "Enabled": true,
+                    "EphTimeConstant": 0.9,
+                    "EpvTimeConstant": 0.9,
+                    "EphInitial": 25,
+                    "EpvInitial": 25,
+                    "EphFinal": 0.1,
+                    "EpvFinal": 0.1,
+                    "EphMin3d": 3,
+                    "EphMin2d": 4,
+                    "UpdateLatency": 0.2,
+                    "UpdateFrequency": 50,
+                    "StartupDelay": 1
+                },
+                "Imu": {
+                    "SensorType": 2,
+                    "Enabled": true,
+                    "AngularRandomWalk": 0.3,
+                    "GyroBiasStabilityTau": 500,
+                    "GyroBiasStability": 4.6,
+                    "VelocityRandomWalk": 0.24,
+                    "AccelBiasStabilityTau": 800,
+                    "AccelBiasStability": 36
+                }
+            }
+        }
+    },
+    "grid": {
+        "entities": {
+            "robot": [
+                {
+                    "name": "airgen-drone",
+                    "kwargs": {}
+                }
+            ],
+            "model": []
+        }
+    }
+}
