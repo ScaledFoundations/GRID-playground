@@ -8,7 +8,7 @@ GRID is composed of high-fidelity simulation, state of the art AI foundation mod
 
 GRID is available in two flavors:
 
-- Open GRID - A fully web-based platform to develop, train, validate and deploy intelligent robots faster, with no installation required. Visit https://grid.scaledfoundations.com to start building now!
+- Open GRID - A fully web-based platform to develop, train, validate and deploy intelligent robots faster, with no installation required. Visit https://grid.scaledfoundations.ai to start building now!
 - GRID Enterprise - A packaged enterprise version for a scalable, customizable and private robot training experience. See https://www.scaledfoundations.ai/product/grid-enterprise for more details.
 
 This repository contains several sample configurations and Python notebooks intended for use with the GRID platform.
