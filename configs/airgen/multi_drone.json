@@ -1,7 +1,10 @@
 {
-    "airgen": {
-        "env_name": "electric_central",
-        "geo": false,
+    "sim":{
+        "sim_type": "airgen",
+        "scene_name": "electric_central",
+        "kwargs": {
+            "geo": false
+        },
         "settings": {
             "SimMode": "Multirotor",
             "Vehicles": {
@@ -63,17 +66,17 @@
                     "AccelBiasStability": 36
                 }
             }
-        }
-    },
-    "grid": {
-        "entities": {
-            "robot": [
-                {
-                    "name": "airgen-drone",
-                    "kwargs": {}
-                }
-            ],
-            "model": []
+            }
+        },
+        "grid": {
+            "entities": {
+                "robot": [
+                    {
+                        "name": "airgen-drone",
+                        "kwargs": {}
+                    }
+                ],
+                "model": []
+            }
         }
     }
-}
