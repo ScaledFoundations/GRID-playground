@@ -1,0 +1,23 @@
+{
+  "sim": {
+    "sim_type": "isaac",
+    "scene_name": "isaac_hospital",
+    "kwargs": {
+      "geo": false
+    },
+    "settings": {
+      "robot_name": "isaac_h1"
+    }
+  },
+  "grid": {
+    "entities": {
+      "robot": [
+        {
+          "name": "humanoid:isaac:sim",
+          "kwargs": {}
+        }
+      ],
+      "model": []
+    }
+  }
+}
