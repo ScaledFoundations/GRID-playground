@@ -1,7 +1,10 @@
 {
-    "airgen": {
-        "env_name": "electric_central",
-        "geo": false,
+    "sim": {
+        "sim_type": "airgen",
+        "scene_name": "electric_central",
+        "kwargs": {
+            "geo": false
+        },
         "settings": {
             "SimMode": "Multirotor",
             "Vehicles": {

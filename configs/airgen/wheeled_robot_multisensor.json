@@ -1,7 +1,10 @@
 {
-    "airgen": {
-        "env_name": "neighborhood",
-        "geo": false,
+    "sim": {
+        "sim_type": "airgen",
+        "scene_name": "neighborhood",
+        "kwargs": {
+            "geo": false
+        },
         "settings": {
             "SimMode": "Car",
             "Vehicles": {
