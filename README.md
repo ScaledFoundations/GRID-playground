@@ -1,15 +1,15 @@
 # General Robot Intelligence Development (GRID) Platform
 
-GRID is a platform built by Scaled Foundations to function as every robot's AI team: enabling the creation and seamless infusion of safe intelligence into your robots. 
+GRID is a platform built by General Robotics to function as every robot's AI team: enabling the creation and seamless infusion of safe intelligence into your robots. 
 
 ![every-robots-ai-team](https://github.com/user-attachments/assets/a2906d8f-b1fe-4d13-aba5-e1fc17b7757f)
 
-GRID is composed of high-fidelity simulation, state of the art AI foundation models, and development and deployment pipelines. GRID represents several robotic form factors, and can be used for building several robotics skills across perception, planning, and control; or to capture massive amounts of synthetic data to train intelligent robots. To know more about our vision and technology, please visit our [website](https://scaledfoundations.ai), check out our [blogs](https://www.scaledfoundations.ai/research#blogs), or read our [technical report](https://arxiv.org/abs/2310.00887).
+GRID is composed of high-fidelity simulation, state of the art robot AI skills, and development and deployment pipelines. GRID represents several robotic form factors, and can be used for building several robotics skills across perception, planning, and control; or to capture massive amounts of synthetic data to train intelligent robots. To know more about our vision and technology, please visit our [website](https://generalrobotics.company), check out our [blogs](https://www.generalrobotics.company/blogs), or read our [technical report](https://arxiv.org/abs/2310.00887).
 
 GRID is available in two flavors:
 
-- Open GRID - A fully web-based platform to develop, train, validate and deploy intelligent robots faster, with no installation required. Visit https://grid.scaledfoundations.ai to start building now!
-- GRID Enterprise - A packaged enterprise version for a scalable, customizable and private robot training experience. See https://www.scaledfoundations.ai/product/grid-enterprise for more details.
+- Open GRID - A fully web-based platform to develop, train, validate and deploy intelligent robots faster, with no installation required. Visit https://grid.generalrobotics.dev to start building now!
+- GRID Enterprise - A packaged enterprise version for a scalable, customizable and private robot training experience. See https://www.generalrobotics.company/product/grid-enterprise for more details.
 
 This repository contains several sample configurations and Python notebooks intended for use with the GRID platform.
 
